@@ -1,0 +1,6 @@
+> & p > p q q
+assume & p > p q
+rule &E1 1 p p q > p q
+rule &E2 1 p p q > p q
+rule >E 2 3 p p q q
+discharge

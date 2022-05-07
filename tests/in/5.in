@@ -1,0 +1,8 @@
+> p > q p
+assume p
+assume q
+assume p
+discharge
+rule >E 1 3 p p q p
+discharge
+discharge

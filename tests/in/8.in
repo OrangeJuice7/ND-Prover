@@ -1,0 +1,12 @@
+> > > p q p p
+assume > > p q p
+assume ~ p
+assume p
+rule ~E 3 2 p p q q
+discharge
+rule >E 3 1 p > p q q p
+rule &I 4 2 p p q ~ p
+discharge
+rule ~I 2 p ~ p q p
+rule ~~E 3 p p
+discharge
