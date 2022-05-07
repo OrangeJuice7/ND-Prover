@@ -159,7 +159,7 @@ public class Main {
 
         //mainLog.setLevel(LogLevel.WARNING);
         batchTestFromFiles( new Solver(mainLog),
-                10,
+                13,
                 i -> "tests/in/" + i + ".in",
                 i -> "tests/out/" + i + ".out");
 

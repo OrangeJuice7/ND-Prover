@@ -45,7 +45,7 @@ For more examples, check the test cases.
 ## Test Case Problems
 Recall that natural deduction in classical propositional logic consists of the following inference rules:
 1. `{p → (q ∧ ¬q)} ⊢ ¬p` *(¬ Intro.)*
-1. `{p, ¬p} ⊢ q` *(¬ Elim.)*
+1. `{p, ¬p} ⊢ q` *(¬ Elim.)* Also known as the principle of explosion.
 1. `{¬¬p} ⊢ p` *(¬¬ Elim.)*
 1. `{p, q} ⊢ p ∧ q` *(∧ Intro.)*
 1. `{p ∧ q} ⊢ p` *(∧ Elim. 1)*
@@ -56,7 +56,7 @@ Recall that natural deduction in classical propositional logic consists of the f
 1. `(p ⊢ q) ⊢ p → q` *(→ Intro.)* Not an invocable inference rule. It is instead represented by the assumption-discharge system.
 1. `{p, p → q} ⊢ q` *(→ Elim.)* Also known as modus ponens.
 
-Some of the test case formulas are non-trivial to prove in natural deduction, and may be of interest to the reader. As wise man Gentzen once said: [if a formula is provable then it is provable without any lemmas](https://en.wikipedia.org/wiki/Cut-elimination_theorem). Of course, each test case already includes a model proof. The test cases are as follows:
+Some of the test case formulas are non-trivial to prove in natural deduction, and may be of interest to the reader. As wise man Gentzen once said: [if a formula is provable then it is provable without any lemmas](https://en.wikipedia.org/wiki/Cut-elimination_theorem), so everything can be proven independently (or at least, you can reprove a result for use as a statement in another result). Of course, each test case already includes a model proof. The test cases are as follows:
 1. `p → p` *(Identity / Reflexivity)* A trivial formula that does not need any inference rules to prove.
 2. `(p ∧ q) → q` *(Conjunction Elimination)* A trivial formula to test applying an inference rule.
 3. `(p ∧ (p → q)) → q` *(Modus Ponens)* Requires multiply rule applications to unpack the conjunction.
@@ -67,6 +67,9 @@ Some of the test case formulas are non-trivial to prove in natural deduction, an
 8. `((p → q) → p) → p` *(Peirce's law)* Not provable in intuitionistic logic.
 9. `p ∨ ¬p` *(Law of Excluded Middle)* Not provable in intuitionistic logic.
 10. `(p → q) → (¬q → ¬p)` *(Contraposition)*
+11. `(p → (q → r)) → (q → (p → r))` *(Permutation/Exchange Rule)*
+12. `¬(p ∧ q) → (¬p ∨ ¬q)` *(De Morgan duality, part 1)* Not provable in intuitionistic logic.
+13. `¬(p ∨ q) → (¬p ∧ ¬q)` *(De Morgan duality, part 2)*
 
 # Last Words
 Do reach out to me if you have any questions about this project.

@@ -1,0 +1,20 @@
+> ~ & p q | ~ p ~ q
+assume ~ & p q
+assume ~ | ~ p ~ q
+assume ~ p
+rule |I1 3 p ~ p q ~ q
+rule &I 4 2 p | ~ p ~ q q ~ | ~ p ~ q
+discharge
+rule ~I 3 p ~ p q | ~ p ~ q
+rule ~~E 4 p p
+assume q
+rule &I 5 6 p p q q
+rule &I 7 1 p & p q q ~ & p q
+discharge
+rule ~I 6 p q q & p q
+rule |I2 7 p ~ p q ~ q
+rule &I 8 2 p | ~ p ~ q q ~ | ~ p ~ q
+discharge
+rule ~I 2 p ~ | ~ p ~ q q | ~ p ~ q
+rule ~~E 3 p | ~ p ~ q
+discharge
